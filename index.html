@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Advanced Text Editor</title>
+</head>
+<body>
+    <div class="editor-container">
+        <div class="toolbar">
+            <button onclick="formatText('bold')"><b>B</b></button>
+            <button onclick="formatText('italic')"><i>I</i></button>
+            <button onclick="formatText('underline')"><u>U</u></button>
+            <button onclick="changeFontColor()">Text Color</button>
+            <input type="color" id="colorPicker" class="color-picker" style="display:none;">
+            <button onclick="formatText('justifyLeft')">Align Left</button>
+            <button onclick="formatText('justifyCenter')">Align Center</button>
+            <button onclick="formatText('justifyRight')">Align Right</button>
+            <button onclick="formatText('insertUnorderedList')">&#8226; Bullets</button>
+            <button onclick="formatText('insertOrderedList')">1. Numbers</button>
+            <button onclick="changeHeadingLevel()">Heading</button>
+            <button onclick="createLink()">Insert Link</button>
+            <button onclick="insertImage()">Insert Image</button>
+            <button onclick="formatText('undo')">Undo</button>
+            <button onclick="formatText('redo')">Redo</button>
+            <button onclick="clearEditor()">Clear Editor</button>
+            <button onclick="saveToFile()">Save to File</button>
+            <button onclick="loadFromFile()">Load from File</button>
+            <button onclick="toggleDarkMode()">Dark Mode</button>
+        </div>
+        <textarea id="editor" placeholder="Type your text here..."></textarea>
+        <input type="file" id="imageInput" class="file-input" style="display:none;" accept="image/*">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
